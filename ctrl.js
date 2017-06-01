@@ -1,23 +1,21 @@
-angular.module("myApp",[]).controller("myCtrl",function($scope){
+angular.module("myApp",[]).controller("myCtrl",function($scope,niceService){
 
   $scope.test = "this is DONE";
-  $scope.niceList = [];
-  $scope.naughtyList = [];
+  $scope.niceList = niceService.niceList;
+  $scope.naughtyList = niceService.naughtyList;
 
 
   $scope.addNewPerson = function(){//this is the actual way to set up an FUNCTION
-    var differenceScore = $scope.niceScore - $scope.naughtyScore;
-    if (differenceScore >= 10){
-      $scope.niceList.push(buildPerson(differenceScore));
-    }else {
-      $scope.naughtyList.push(buildPerson(differenceScore));
-      }
+    var person = buildPerson();
+    niceService.addPerson(person);
+
     }
 //this function build a person
   function buildPerson(differenceScore){
        return {
          name:$scope.name,
-         score:differenceScore
+         niceScore:$scope.niceScore,
+         naughtyScore:$scope.naughtyScore
        }
      }
 
