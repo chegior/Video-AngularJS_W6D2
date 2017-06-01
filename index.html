@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body ng-controller='myCtrl'>
+    <h3>TEST ANGULAR APP </h3>
+    <!-- <input type="text" ng-model="test" value="">
+    {{test}} -->
+    <div class="input-area">
+      <span>Name:</span><input type="text" ng-model='name' value="">
+      <span>Nice Score:</span><input type="number" ng-model="niceScore" value="">
+      <span>Naughty Score:</span><input type="number"  ng-model="naughtyScore" value="">
+      <button type="button" ng-click="addNewPerson()">Add </button>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="ctrl.js"></script>
+    <script src="service.js"></script>
+
+
+
+  </body>
+</html>
