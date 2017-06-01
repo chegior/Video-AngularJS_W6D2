@@ -15,6 +15,17 @@
       <span>Naughty Score:</span><input type="number"  ng-model="naughtyScore" value="">
       <button type="button" ng-click="addNewPerson()">Add </button>
     </div>
+    <hr/>
+    <hr/>
+    <div class="niceList"><h3>NICE PEOPLE</h3>
+      <div ng-repeat = 'person in niceList'>{{person.name}}</div>
+    </div>
+    <hr/>
+    <div class="naughtyList"><h3>NAUGHTY PEOPLE</h3>
+      <div ng-repeat = 'person in naughtyList'>{{person.name}}</div>
+    </div>
+
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="app.js"></script>
